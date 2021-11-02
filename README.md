@@ -1,2 +1,2 @@
 # yatube_project
-Социальная сеть блогеров
+Educational project
