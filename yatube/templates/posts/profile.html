@@ -1,9 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% block title %}
-Последние обновления на сайте
+Профайл пользователя {{ full_name }}
 {% endblock %}
 {% block content %}
   <div class="container py-5">
+  <h1>Все посты пользователя {{ full_name }} </h1>
+  <h3>Всего постов: {{ post_count }} </h3>
       {% for post in page_obj %}
       {% include 'includes/post_content.html' %}
       {% if post.group %}
@@ -12,4 +14,4 @@
       {% if not forloop.last %}<hr>{% endif %}
       {% endfor %}
       {% include 'includes/paginator.html' %}
-{% endblock %}
+{% endblock %} 
